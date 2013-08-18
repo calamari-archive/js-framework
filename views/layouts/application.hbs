@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>{{title}}</title>
+  <meta charset="utf-8">
+  <meta name="csrf-param" content="_csrf">
+  <meta name="csrf-token" content="{{csrfToken}}">
+  {{{css 'application'}}}
+</head>
+<body>
+  <div class="wrap">
+    {{#each flash.info}}
+      <p class="info-message">{{this}}</p>
+    {{/each}}
+    {{#each flash.error}}
+      <p class="error-message">{{this}}</p>
+    {{/each}}
+    {{#each flash.success}}
+      <p class="success-message">{{this}}</p>
+    {{/each}}
+
+    {{{body}}}
+  </div>
+</body>
+</html>
